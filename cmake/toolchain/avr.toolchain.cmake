@@ -3,7 +3,7 @@ set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR avr)
 
 # User settings with sensible defaults
-if(CMAKE_HOST_WIN32)
+if(WIN32)
     set(ARDUINO_PATH_DEFAULT "$ENV{LOCALAPPDATA}/Arduino15/packages/arduino")
 else()
     set(ARDUINO_PATH_DEFAULT "$ENV{HOME}/.arduino15/packages/arduino")

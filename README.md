@@ -1,6 +1,10 @@
 # Arduino AVR CMake
 
-Compile Arduino AVR programs using CMake. 
+Compile Arduino AVR programs using CMake.
+
+Note that I've (undefined0) modified this to work with CPM!
+
+Usage example is at undefined06855/CanSat at arduino/cansat/sat-v2/CMakeLists.txt
 
 ## Instructions
 
@@ -19,7 +23,7 @@ Compile Arduino AVR programs using CMake.
     ```
     Customize the port, toolchain file, and build type for your specific
     configuration.
-    
+
     On windows you will need to use a generator other than Visual Studio such Ninja:
     ```sh
     cmake -S. -Bbuild \
@@ -32,18 +36,18 @@ Compile Arduino AVR programs using CMake.
     ```sh
     cmake --build build -j -t upload-blink
     ```
-    To compile the program without uploading, you can use 
+    To compile the program without uploading, you can use
     ```sh
     cmake --build build -j -t blink
     ```
     If you're using an Arduino with a native USB interface (e.g. Leonardo),
-    you'll have to press the reset button before uploading. You could 
-    automate this by opening its serial port at 1200 baud as part of the 
+    you'll have to press the reset button before uploading. You could
+    automate this by opening its serial port at 1200 baud as part of the
     upload process.
 
 ## VSCode
 
-In VSCode, you can select the board you want to use using the 
+In VSCode, you can select the board you want to use using the
 `CMake: Select a Kit` command from the CMake Tools extension.
 Then select the right board as shown in the following image:
 ![Selecting the Arduino board using CMake](images/selecting.png)
